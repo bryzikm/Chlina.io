@@ -174,7 +174,7 @@ $bold: 700;
             background-image: url(../viewBig.png);
             
 
-            .reklama {
+            .advertisement {
                 width: 167px;
                 height: 55px;
                 top: 0;
@@ -338,7 +338,7 @@ $bold: 700;
 
     .info{
         margin-bottom: 30px;
-        width: 150%;
+        
     }
 
     .infophone {
@@ -353,7 +353,29 @@ $bold: 700;
                     font-size: 10px;
                 }  
             }
-        }   
+        } 
+        
+        .text {
+            .viewMore {
+                text-align: center;
+            }
+        }
+
+        .info {
+            width: 690px;
+            
+            .text {
+                text-align: center;
+            }
+
+            .photo {
+                background-image: url(../viewPhone.png);
+            }
+
+
+        }
     }   
+
+    
     
   }
