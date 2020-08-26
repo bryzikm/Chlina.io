@@ -2,10 +2,12 @@
 
 // COLORS
 $green-main: #17AB71;
+$green: #93FF96;
 $white: #FFFFFF;
 $black: #000000;
 $grey-1: #B9BABA;
 $grey-2: #3D413F;
+$grey-3: #EFF4F2;
 
 // FONT WEIGHTS
 $thin: 300;
@@ -52,6 +54,17 @@ body {
 
   &::-webkit-scrollbar-thumb {
     background-color: $green-main;
+    color: $white;
+  }
+
+  ::selection {
+    color: $white;
+    background: $green-main;
+  }
+
+  ::-moz-selection {
+    color: $white;
+    background: $green-main;
   }
 }
 
@@ -86,6 +99,10 @@ p, a, li, label, span {
   padding: 10px 0;
   background-color: $white;
 
+  .hamburger {
+    display: none;
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -109,5 +126,65 @@ p, a, li, label, span {
     color: $grey-2;
     font-size: 24px;
     font-weight: $semi-bold;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .header {
+    .hamburger {
+      display: block;
+      width: 30px;
+      height: 35px;
+      border: 0;
+      border-top: 5px solid $black;
+      background: transparent;
+      position: relative;
+      transition: .3s transform linear;
+      margin-top: 10px;
+    }
+
+    .hamburger:hover {
+      cursor: pointer;
+    }
+
+    .hamburger::before, .hamburger::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      border-top: 5px solid $black;
+      transform: translateY(5px);
+    }
+
+    .hamburger::after {
+      transform: translateY(15px);
+      transition: .3s transform linear;
+    }
+
+    .hamburger.open {
+      transform: rotate(45deg) translateY(5px);
+      border: none;
+    }
+
+    .hamburger.open::after {
+      transform: rotate(-90deg) translateX(-5px);
+    }
+
+    #mobile-menu {
+      display: block;
+      position: fixed;
+      opacity: 1000;
+      left: 0;
+      background-color: $white;
+      width: 100%;
+      padding-bottom: 15px;
+      transition: all .3s ease-in-out;
+      transform: translateX(-100%);
+    }
+
+    #mobile-menu.nav-list-active {
+      transform: translateX(0);
+    }
   }
 }
