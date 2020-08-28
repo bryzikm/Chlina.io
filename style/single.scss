@@ -93,7 +93,7 @@
     }
 
     .other-posts-post-image {
-        width: 350px;
+        width: 100%;
         height: 210px;
     }
 
@@ -138,29 +138,43 @@
     padding-bottom: 170px;
 
     .tabs-wrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        padding: 85px 0 180px 0;
     }
 
     .tab-wrapper {
-        width: 49%;
         background-color: $grey-3;
         padding: 64px 35px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        transition: transform .2s;
+    }
+
+    .tab-wrapper .tab-arrow {
+        display: flex;
+        align-items: center;
+    }
+
+    .tab-wrapper .tab-arrow .tab-arrow-svg {
+        fill: $black;
+    }
+
+    .tab-wrapper:hover {
+        transform: scale(1.03);
     }
 
     .green {
         background-color: $green-main;
     }
 
+    .green .tab-arrow .tab-arrow-svg {
+        fill: $white;
+    }
+
     .tab-header {
         font-size: 12px;
         letter-spacing: 1.2px;
         color: $grey-1;
-        font-family: 'Oswald', sans-serif;
         font-weight: $semi-bold;
         padding-bottom: 3px;
     }
@@ -177,6 +191,10 @@
 
     .white {
         color: $white;
+    }
+
+    .tab-header, .tab-title {
+        font-family: 'Oswald', 'sans-serif';
     }
 }
 
@@ -195,5 +213,70 @@
         font-family: 'Oswald', sans-serif;
         color: $grey-1;
         font-weight: $semi-bold;
+    }
+}
+
+@media only screen and (max-width: 1153px) {
+    .image {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .other-posts {
+        .other-posts-widgets-wrapper {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .other-posts-post-wrapper {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .other-posts-post-wrapper:last-child {
+            margin-bottom: 0;
+        }
+
+        .other-posts-post-title {
+            font-size: 56px;
+            text-align: center;
+        }
+
+        .other-posts-post-date {
+            text-align: center;
+        }
+
+        .other-posts-post-shortcut {
+            text-align: center;
+        }
+
+        .other-posts-watch-more {
+            justify-content: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .tabs {
+        .tab-wrapper:first-child {
+            margin-bottom: 30px;
+        }
+    }
+
+    .image {
+        .post-headers-wrapper {
+            bottom: -10px;
+            padding: 80px 20px 60px 20px;
+        }
+    }
+
+    .post {
+        .post-container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 }
