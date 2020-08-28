@@ -1,18 +1,18 @@
-const mobileMenuId = document.getElementById('mobile-menu');
-const headerId = document.getElementById('header-id');
-const hamburgerButtonClass = document.getElementsByClassName('hamburger');
+var mobileMenuId = document.getElementById('mobile-menu');
+var headerId = document.getElementById('header-id');
+var hamburgerButtonClass = document.getElementsByClassName('hamburger');
 
-const openMobileMenu = () => {
+function openMobileMenu() {
   mobileMenuId.classList.add('nav-list-active');
   hamburgerButtonClass[0].classList.add('open');
 }
 
-const closeMobileMenu = () => {
+function closeMobileMenu() {
   mobileMenuId.classList.remove('nav-list-active');
   hamburgerButtonClass[0].classList.remove('open');
 }
 
-const toggleMobileMenu = () => {
+function toggleMobileMenu() {
   if (mobileMenuId.classList.contains('nav-list-active')) {
     closeMobileMenu();
   } else {
@@ -20,7 +20,7 @@ const toggleMobileMenu = () => {
   }
 }
 
-const isClickAbleToCloseMenu = (e) => {
+function isClickAbleToCloseMenu(e) {
   if (mobileMenuId.classList.contains('nav-list-active') && e.target === hamburgerButtonClass[0]) {
     return false;
   }
@@ -30,7 +30,7 @@ const isClickAbleToCloseMenu = (e) => {
     e.target.parentNode !== mobileMenuId;
 }
 
-window.addEventListener('mouseup', event => {
+window.addEventListener('mouseup', function (event) {
   if (isClickAbleToCloseMenu(event)) {
     closeMobileMenu();
   }
