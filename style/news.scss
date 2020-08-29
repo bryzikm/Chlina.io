@@ -342,6 +342,7 @@ $bold: 700;
         display: flex;
         justify-content: center;
         margin-bottom: 30px;
+        font-size: 18px;
     }
 
     
@@ -350,8 +351,9 @@ $bold: 700;
             margin-bottom: 40px;
             margin-top: 10px;
         }
-        .big-text-content {
-            font-size: 16px;
+        .big-info .big-text .big-text-content {
+            font-size: 10px;
+            
             
         }
 
@@ -365,11 +367,10 @@ $bold: 700;
             
         }
 
-        .text {
-            .view-more {
+        .text .view-more {
                 text-align: center;
                 padding: 10px;
-            }
+            
         }
 
         
