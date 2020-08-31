@@ -9,13 +9,15 @@
 
     <link href="style/style.css" rel="stylesheet" type="text/css" />
     <link href="grid.min.css" rel="stylesheet" type="text/css" />
+    <link href="style/home.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<header class="header section">
+<header class="header section" id="header-id">
     <div class="container">
         <a class="logo" href="#">Chlina</a>
         <nav class="nav">
-            <ul class="nav-list">
+            <button class="hamburger" onclick="toggleMobileMenu()"></button>
+            <ul class="nav-list" id="mobile-menu">
                 <li class="nav-item">
                     <a class="nav-link" href="#about-me">About</a>
                 </li>
@@ -32,5 +34,173 @@
         </nav>
     </div>
 </header>
+<section class="home section">
+    <div class="container home-header">
+        <div class="col-lg-8">
+            <h1 class="header-1">Parafia pw. św. Bartłomieja Apostoła w Chlinie</h1>
+            <p class="paragraph">Parafia p.w. św. Bartłomieja Apostoła w Chlinie została ustanowiona prawdopodobnie w 1354 roku.</p>
+        </div>
+
+        <div class="tabs-wrapper row">
+            <div class="col-lg-6">
+                <a class="tab-wrapper col-lg-12" href="#news">
+                    <div>
+                        <h5 class="tab-header">AKTUALNOŚCI</h5>
+                        <p class="tab-title">Sprawdź co się dzieje</p>
+                    </div>
+                    <span class="tab-arrow">
+                        <svg class="tab-arrow-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width=32 height=32 viewBox="0 0 32 32" >
+                            <path d="M21.548 5.088c-0.436-0.451-1.162-0.451-1.613 0-0.436 0.436-0.436 1.162 0 1.596l8.177 8.177h-26.984c-0.629 0.001-1.129 0.501-1.129 1.13s0.5 1.145 1.129 1.145h26.984l-8.177 8.162c-0.436 0.451-0.436 1.178 0 1.613 0.451 0.451 1.178 0.451 1.613 0l10.113-10.113c0.451-0.436 0.451-1.162 0-1.596l-10.113-10.114z"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+            <div class="col-lg-6">
+                <a class="tab-wrapper green col-lg-12" href="#contact">
+                    <div>
+                        <h5 class="tab-header light-green">MASZ PYTANIE?</h5>
+                        <p class="tab-title white">Wyślij nam wiadomość</p>
+                    </div>
+                    <span class="tab-arrow">
+                        <svg class="tab-arrow-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width=32 height=32 viewBox="0 0 32 32" >
+                            <path d="M21.548 5.088c-0.436-0.451-1.162-0.451-1.613 0-0.436 0.436-0.436 1.162 0 1.596l8.177 8.177h-26.984c-0.629 0.001-1.129 0.501-1.129 1.13s0.5 1.145 1.129 1.145h26.984l-8.177 8.162c-0.436 0.451-0.436 1.178 0 1.613 0.451 0.451 1.178 0.451 1.613 0l10.113-10.113c0.451-0.436 0.451-1.162 0-1.596l-10.113-10.114z"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-12 content-wrapper">
+                <h2 class="header-2">O wsi</h2>
+                <p class="content-header about-header">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae tincidunt nisl, eu ullamcorper quam.</p>
+                <p class="content about-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae tincidunt nisl, eu ullamcorper quam. Donec feugiat id arcu eu porttitor. Praesent sed rutrum elit. Phasellus pellentesque sagittis enim, quis tincidunt turpis dignissim blandit.</p>
+                <p class="content about-content">Curabitur malesuada eu elit et cursus. Vivamus mollis tempus volutpat. Etiam ac orci pharetra tellus vulputate malesuada eget vitae lorem. Mauris gravida lectus id ipsum accumsan maximus. Morbi id cursus justo. Cras mattis turpis vel lorem consequat luctus.</p>
+            </div>
+            <div class="col-lg-5 col-md-12 image-wrapper">
+                <img src="./about.png" class="image-view"/>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="history section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-12 d-lg-block d-sm-none image-wrapper">
+                <img src="./history.png" class="image-view">
+            </div>
+            <div class="col-lg-7 col-md-12 content-wrapper">
+                <h2 class="header-2">Historia</h2>
+                <p class="content-header history-header">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae tincidunt nisl, eu ullamcorper quam.</p>
+                <p class="content history-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae tincidunt nisl, eu ullamcorper quam. Donec feugiat id arcu eu porttitor. Praesent sed rutrum elit. Phasellus pellentesque sagittis enim, quis tincidunt turpis dignissim blandit.</p>
+                <p class="content history-content">Curabitur malesuada eu elit et cursus. Vivamus mollis tempus volutpat. Etiam ac orci pharetra tellus vulputate malesuada eget vitae lorem. Mauris gravida lectus id ipsum accumsan maximus. Morbi id cursus justo. Cras mattis turpis vel lorem consequat luctus.</p>
+            </div>
+            <div class="col-lg-5 col-md-12 d-lg-none image-wrapper">
+                <img src="./history.png" class="image-view">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="functions section background">
+    <div class="container">
+        <h2 class="header-2">Pełnione funkcje</h2>
+        <div class="container-row row">
+            <div class="person col-lg-3 col-md-4 col-sm-6">
+                <img src="./person1.png" class="person-image">
+                <div class="person-information">
+                    <p class="person-name">Jan Kowalski</p>
+                    <p class="person-function">Wójt Gminy</p>
+                </div>
+            </div>
+            <div class="person col-lg-3 col-md-4 col-sm-6">
+                <img src="./person2.png" class="person-image">
+                <div class="person-information">
+                    <p class="person-name">Jan Kowalski</p>
+                    <p class="person-function">Wójt Gminy</p>
+                </div>
+            </div>
+            <div class="person col-lg-3 col-md-4 col-sm-6">
+                <img src="./person1.png" class="person-image">
+                <div class="person-information">
+                    <p class="person-name">Jan Kowalski</p>
+                    <p class="person-function">Wójt Gminy</p>
+                </div>
+            </div>
+            <div class="person col-lg-3 col-md-4 col-sm-6">
+                <img src="./person2.png" class="person-image">
+                <div class="person-information">
+                    <p class="person-name">Jan Kowalski</p>
+                    <p class="person-function">Wójt Gminy</p>
+                </div>
+            </div>
+            <div class="person col-lg-3 col-md-4 col-sm-6">
+                <img src="./person1.png" class="person-image">
+                <div class="person-information">
+                    <p class="person-name">Jan Kowalski</p>
+                    <p class="person-function">Wójt Gminy</p>
+                </div>
+            </div>
+            <div class="person col-lg-3 col-md-4 col-sm-6">
+                <img src="./person2.png" class="person-image">
+                <div class="person-information">
+                    <p class="person-name">Jan Kowalski</p>
+                    <p class="person-function">Wójt Gminy</p>
+                </div>
+            </div>
+            <div class="person col-lg-3 col-md-4 col-sm-6">
+                <img src="./person1.png" class="person-image">
+                <div class="person-information">
+                    <p class="person-name">Jan Kowalski</p>
+                    <p class="person-function">Wójt Gminy</p>
+                </div>
+            </div>
+            <div class="person col-lg-3 col-md-4 col-sm-6">
+                <img src="./person2.png" class="person-image">
+                <div class="person-information">
+                    <p class="person-name">Jan Kowalski</p>
+                    <p class="person-function">Wójt Gminy</p>
+                </div>
+            </div>
+            <div class="person col-lg-3 col-md-4 col-sm-6">
+                <img src="./person1.png" class="person-image">
+                <div class="person-information">
+                    <p class="person-name">Jan Kowalski</p>
+                    <p class="person-function">Wójt Gminy</p>
+                </div>
+            </div>
+            <div class="person col-lg-3 col-md-4 col-sm-6">
+                <img src="./person2.png" class="person-image">
+                <div class="person-information">
+                    <p class="person-name">Jan Kowalski</p>
+                    <p class="person-function">Wójt Gminy</p>
+                </div>
+            </div>
+            <div class="person col-lg-3 col-md-4 col-sm-6">
+                <img src="./person1.png" class="person-image">
+                <div class="person-information">
+                    <p class="person-name">Jan Kowalski</p>
+                    <p class="person-function">Wójt Gminy</p>
+                </div>
+            </div>
+            <div class="person col-lg-3 col-md-4 col-sm-6">
+                <img src="./person2.png" class="person-image">
+                <div class="person-information">
+                    <p class="person-name">Jan Kowalski</p>
+                    <p class="person-function">Wójt Gminy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer section">
+    <div class="container footer-wrapper row">
+        <p class="footer-copyright">© Parafia w Chlinie by </p>
+        <a class="footer-copyright ml-1" href="http://bryzikm.pl/" target="_blank">bryzikm.pl</a>
+    </div>
+</footer>
+<script src="./js/common.js"></script>
 </body>
 </html>
