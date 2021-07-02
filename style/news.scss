@@ -107,7 +107,7 @@ $bold: 700;
     }
 
     .photo {
-    background-image: url(../view.png);
+    background-image: url(../img/view.png);
     width: 100%;
     height: 237px;
 
@@ -172,7 +172,7 @@ $bold: 700;
         .big-photo {
             width: 100%;
             height: 294px;
-            background-image: url(../viewBig.png);
+            background-image: url(../img/viewBig.png);
             
 
             .advertisement {
@@ -316,7 +316,6 @@ $bold: 700;
 
 
 .footer {
-    background-color: $white;
     width: 100%;
     position: relative;
     height: 85px;
@@ -376,7 +375,7 @@ $bold: 700;
         
 
         .photo {
-            background-image: url(../viewPhone.png);
+            background-image: url(../img/viewPhone.png);
         }
     }
 

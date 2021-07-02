@@ -1,11 +1,25 @@
-@import "style";
+// COLORS
+$green-main: #17AB71;
+$green: #93FF96;
+$white: #FFFFFF;
+$black: #000000;
+$grey-1: #B9BABA;
+$grey-2: #3D413F;
+$grey-3: #EFF4F2;
+
+// FONT WEIGHTS
+$thin: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
 
 .image {
     margin-top: 170px;
     margin-left: calc((100% - 1146px) / 2);
     width: calc(100% - ((100% - 1146px) / 2));
     height: 75vh;
-    background-image: url('../background.png');
+    background-image: url('../img/background.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -36,7 +50,7 @@
         padding-right: 160px;
     }
 
-    .post-paragraph-header {
+    h3 {
         font-family: 'Oswald', 'sans-serif';
         color: $grey-2;
         font-weight: $thin;
@@ -44,14 +58,14 @@
         margin-bottom: 25px;
     }
 
-    .post-paragraph {
+    p {
         font-size: 18px;
         color: $grey-1;
         line-height: 30px;
         margin-bottom: 20px;
     }
 
-    .darker {
+    p.darker {
         color: $grey-2;
         margin-bottom: 90px;
     }
@@ -60,7 +74,8 @@
         margin-bottom: 90px;
     }
 
-    .post-image {
+    img {
+        display: block;
         width: 100%;
     }
 }

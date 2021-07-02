@@ -1,4 +1,7 @@
 @import "contact";
+@import "news";
+@import "home";
+@import "single";
 
 // COLORS
 $green-main: #17AB71;
@@ -98,6 +101,7 @@ p, a, li, label, span {
   z-index: 1000;
   padding: 10px 0;
   background-color: $white;
+  height: 60px;
 
   .hamburger {
     display: none;
@@ -194,4 +198,13 @@ p, a, li, label, span {
       transform: translateX(0);
     }
   }
+}
+
+#map {
+  width: 100%;
+  height: 500px;
+}
+
+.text-center {
+  text-align: center;
 }

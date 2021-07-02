@@ -30,8 +30,35 @@ function isClickAbleToCloseMenu(e) {
     e.target.parentNode !== mobileMenuId;
 }
 
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: { lat: 50.4469853, lng: 19.8265339 },
+    zoom: 15,
+  });
+
+  marker.setMap(map);
+}
+
+function onHrefClick() {
+  $('a[href^="#"]').on('click', function (event) {
+    var target = $($(this).attr('href'));
+
+    if (target.length) {
+      event.preventDefault();
+      $('html, body').animate({
+        scrollTop: (target.offset().top)
+      }, 1000, 'swing');
+    }
+  });
+}
+
 window.addEventListener('mouseup', function (event) {
   if (isClickAbleToCloseMenu(event)) {
     closeMobileMenu();
   }
+})
+
+$(document).ready(function () {
+  initMap();
+  onHrefClick();
 })
